@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+header {
+  @apply text-white py-2 bg-figmaGray;
+}
+
+.headerGrp {
+  @apply flex flex-row items-center py-2;
+}
+
+.signUpGrp {
+  @apply flex flex-row items-center gap-5;
+}
+
+.signButton {
+  @apply px-6 py-2 rounded-md capitalize bg-figmaOrange hover:scale-110 transition ease-in-out duration-150;
+}
+
+.headerTopText {
+  @apply flex flex-row items-center gap-10;
+}
+
+.icon {
+  @apply h-4;
+}
+
+.topGrp {
+  @apply flex flex-col xl:flex-row items-center px-5 md:px-10 py-5 justify-between gap-5 xl:gap-0;
+}
+
+.logoGrp {
+  @apply flex flex-row items-center text-2xl md:text-3xl lg:text-4xl font-semibold;
+}
+
+.inputBox {
+  @apply w-full md:w-96 flex flex-row items-center gap-3 p-2 border border-white rounded-md;
+}
+
+.headerInput {
+  @apply w-full bg-transparent outline-0 placeholder:text-white placeholder:opacity-85 text-sm;
+}
+
+.cartCountGrp {
+  @apply flex flex-row items-center;
+}
+
+.bottomGrp {
+  @apply py-5 flex flex-col md:flex-row items-center justify-start gap-10 xl:gap-20;
+}
+
+.categoriesHeader {
+  @apply bg-figmaOrange text-xl font-semibold flex flex-row items-center gap-3 w-fit px-10 xl:px-20 py-2;
+}
+
+.categoriesList {
+  @apply flex flex-col md:flex-row items-center gap-5 xl:gap-10;
+}
+
+.categoriesText {
+  @apply capitalize hover:scale-110 hover:text-figmaOrange transition ease-in-out duration-150 cursor-pointer;
+}
+
+/* FEATURE SECTION */
+.featuresSection {
+  @apply flex flex-col md:grid md:grid-cols-2 xl:flex xl:flex-row items-center gap-5 lg:gap-10 xl:gap-0 lg:justify-between py-5 px-5 md:px-10;
+}
+
+.featureBox {
+  @apply flex flex-col items-center gap-3 w-72 min-h-52 md:mx-auto bg-figmaGray text-white p-5 rounded-md font-light cursor-default;
+}
+
+.featureIcon {
+  @apply h-10;
+}
+
+.featureHeading {
+  @apply text-xl md:text-2xl font-semibold capitalize;
+}
+
+.featureText {
+  @apply text-center;
+}
+
+/* NEWS LETTER GROUP */
+.newsLetterGrp {
+  @apply text-white bg-figmaOrange flex flex-col md:flex-row justify-between items-center gap-3 md:gap-0 px-10 py-3;
+}
+
+.socialIconGrp {
+  @apply flex flex-row items-center gap-4;
+}
+
+.socialIcon {
+  @apply h-5;
+}
+
+/* FOOTER */
+footer {
+  @apply px-5 md:px-10 py-5;
+}
+
+.footerColsGrp {
+  @apply flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row items-start gap-6 lg:gap-0 lg:justify-between mt-8;
+}
+
+.footerCols {
+  @apply flex flex-col gap-2;
+}
+
+.colHeading {
+  @apply font-semibold capitalize;
+}
+
+.colTextGrp {
+  @apply text-sm;
+}
+
+.footerText {
+  @apply hover:scale-110 hover:text-figmaOrange cursor-pointer transition ease-in-out duration-150;
+}
