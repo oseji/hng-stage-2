@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Features from "./Features";
 import Footer from "./Footer";
+import Products from "./Products";
 
 import searchIcon from "./assets/searchIcon.png";
 import cameraIcon from "./assets/cameraIcon.png";
@@ -78,6 +79,8 @@ function App() {
           </ul>
         </div>
       </header>
+
+      <Products></Products>
 
       <Features></Features>
 
