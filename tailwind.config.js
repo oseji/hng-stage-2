@@ -6,6 +6,7 @@ export default {
       colors: {
         figmaOrange: "#EB8F05",
         figmaGray: "#3A4F41",
+        figmaPaleOrange: "#FFEBCD",
       },
     },
   },

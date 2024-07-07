@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
+import { Route, Switch, Link } from "react-router-dom";
+
 import Features from "./Features";
 import Footer from "./Footer";
 import Products from "./Products";
+import MyCart from "./MyCart";
+import CheckOut from "./Checkout";
+
+import delivery from "./assets/deliveryIcon.png";
+import heart from "./assets/mycartheart.png";
 
 import searchIcon from "./assets/searchIcon.png";
 import cameraIcon from "./assets/cameraIcon.png";
@@ -22,6 +29,28 @@ function App() {
   return (
     <div className="App">
       <header>
+        <div className="topHeader">
+          <button className="border border-white px-4 py-2  text-white">
+            Download app
+          </button>
+
+          <div className="topHeaderGrp">
+            <div className=" flex flex-row items-center gap-2">
+              <img src={delivery} alt="delivery icon" className="icon" />
+              <p className=" hidden md:block">Fast delivery</p>
+            </div>
+
+            <p className="hidden md:block">Help</p>
+
+            <div className=" flex flex-row items-center gap-2">
+              <img src={heart} alt="delivery icon" className="icon" />
+              <p className=" hidden md:block">Wishlist</p>
+            </div>
+
+            <p className=" md:hidden">Help</p>
+          </div>
+        </div>
+
         <div className="topGrp">
           <div className="logoGrp">
             <p className=" text-figmaOrange">Carty</p>
@@ -47,19 +76,20 @@ function App() {
               />
             </form>
 
-            <div className="cartCountGrp">
-              <div className=" flex flex-row items-center gap-1 pr-4 border-r border-white">
-                <img src={headerCart} alt="" className="icon" />
-                <p>Cart</p>
-              </div>
+            <Link to={"/MyCart"}>
+              <div className="cartCountGrp">
+                <div className=" flex flex-row items-center gap-1 pr-4 border-r border-white">
+                  <img src={headerCart} alt="" className="icon" />
+                  <p>Cart</p>
+                </div>
 
-              <p className=" pl-4">{cartCount} items</p>
-            </div>
+                <p className=" pl-4">{cartCount} items</p>
+              </div>
+            </Link>
           </div>
 
           <div className="signUpGrp">
-            <button className="signButton">sign in</button>
-            <button className="signButton">sign up</button>
+            <button className="signButton">sign in / sign up</button>
           </div>
         </div>
 
@@ -80,14 +110,26 @@ function App() {
         </div>
       </header>
 
-      <Products></Products>
+      <Switch>
+        <Route exact path={"/"}>
+          <Products></Products>
+        </Route>
+
+        <Route path={"/MyCart"}>
+          <MyCart></MyCart>
+        </Route>
+
+        <Route path={"/Checkout"}>
+          <CheckOut></CheckOut>
+        </Route>
+      </Switch>
 
       <Features></Features>
 
       <div className="newsLetterGrp">
         <p>Sign up to our news letter</p>
 
-        <form className="border border-white p-2 rounded-md w-full md:w-96">
+        <form className="border border-white p-2 w-full md:w-96">
           <input
             type="email"
             required

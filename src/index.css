@@ -3,7 +3,15 @@
 @tailwind utilities;
 
 header {
-  @apply text-white py-2 bg-figmaGray;
+  @apply text-white pb-2 bg-figmaGray;
+}
+
+.topHeader {
+  @apply flex flex-row justify-between items-center px-5 md:px-10 py-2 bg-figmaOrange text-white;
+}
+
+.topHeaderGrp {
+  @apply flex flex-row items-center gap-5 xl:gap-10;
 }
 
 .headerGrp {
@@ -15,7 +23,7 @@ header {
 }
 
 .signButton {
-  @apply px-6 py-2 rounded-md capitalize bg-figmaOrange hover:scale-110 transition ease-in-out duration-150;
+  @apply px-6 py-2  capitalize bg-figmaOrange hover:scale-110 transition ease-in-out duration-150;
 }
 
 .headerTopText {
@@ -35,7 +43,7 @@ header {
 }
 
 .inputBox {
-  @apply w-full md:w-96 flex flex-row items-center gap-3 p-2 border border-white rounded-md;
+  @apply w-full md:w-96 flex flex-row items-center gap-3 p-2 border border-white;
 }
 
 .headerInput {
@@ -68,15 +76,23 @@ header {
 }
 
 .filterSection {
-  @apply w-full md:w-1/3 lg:w-1/4 flex flex-col gap-3;
+  @apply w-full  md:w-1/4 xl:w-56 flex flex-col gap-3;
 }
 
 .filterHeadingGrp {
-  @apply flex flex-row items-center justify-between border-b border-black;
+  @apply flex flex-row items-center justify-between bg-figmaPaleOrange p-2 border border-black capitalize;
+}
+
+.filterSelectionGrp {
+  @apply flex flex-col gap-2 items-start border border-black p-2;
+}
+
+.filtersSelection {
+  @apply flex flex-row items-center gap-3 capitalize;
 }
 
 .productsGrp {
-  @apply w-full md:w-2/3 lg:w-3/4 p-5 border border-black rounded-md;
+  @apply w-full md:w-2/3 lg:w-3/4 p-5 border border-black;
 }
 
 .productsGrpHeading {
@@ -84,16 +100,24 @@ header {
 }
 
 .sortGrp {
-  @apply w-fit flex flex-row items-center gap-3 border border-black p-2 rounded-md;
+  @apply w-fit flex flex-row items-center gap-3 border border-black px-2;
+}
+
+.productHeadIconGrp {
+  @apply flex flex-row items-center;
+}
+
+.proudctHeadIcon {
+  @apply h-4;
 }
 
 .productsCollection {
   @apply grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
 }
 
-.productBox {
-  @apply border border-black rounded-md;
-}
+/* .productBox {
+  @apply border border-black;
+} */
 
 .topProductGrp {
   @apply p-2;
@@ -107,16 +131,78 @@ header {
   @apply h-3 cursor-pointer hover:scale-110 transition-none ease-in-out duration-150;
 }
 
+.productImg {
+  @apply h-32 mx-auto;
+}
+
 .bottomProductGrp {
-  @apply bg-figmaOrange bg-opacity-70 font-semibold text-center;
+  @apply bg-figmaPaleOrange bg-opacity-70 font-semibold text-center py-1;
 }
 
 .productName {
-  @apply text-black;
+  @apply text-black capitalize;
 }
 
 .productPrice {
   @apply text-figmaOrange;
+}
+
+.paginationGrp {
+  @apply flex flex-row items-center gap-5 mt-10 justify-center;
+}
+
+.pageNum {
+  @apply py-2 px-3 border border-black cursor-pointer;
+}
+
+.activePage {
+  @apply bg-black text-white;
+}
+
+/* MY CART SECTION */
+.myCartSection {
+  @apply flex flex-col lg:flex-row gap-10 lg:gap-0 items-start lg:justify-between px-5 md:px-10 py-5;
+}
+
+.cartDisplay {
+  @apply w-full lg:w-fit border border-black p-2;
+}
+
+.cartDisplayHeading {
+  @apply flex flex-row items-center justify-between px-2;
+}
+
+.cartImg {
+  @apply h-52;
+}
+
+.cartItemsDisplayGrp {
+  @apply flex flex-col gap-10 md:gap-5 p-2;
+}
+
+.cartItemBox {
+  @apply flex flex-col md:flex-row gap-5 items-start;
+}
+
+.itemDetailsBox {
+  @apply flex flex-col gap-1 bg-figmaPaleOrange p-4 mb-4;
+}
+
+.itemRow {
+  @apply flex flex-row items-center;
+}
+
+.itemName {
+  @apply font-semibold;
+}
+
+.itemPrice {
+  @apply font-semibold text-2xl text-figmaOrange;
+}
+
+/* delivery display */
+.deliveryDisplay {
+  @apply w-full md:w-1/3 border border-black py-2;
 }
 
 /* FEATURE SECTION */
@@ -125,7 +211,7 @@ header {
 }
 
 .featureBox {
-  @apply flex flex-col items-center gap-3 w-72 min-h-52 md:mx-auto bg-figmaGray text-white p-5 rounded-md font-light cursor-default;
+  @apply flex flex-col items-center gap-3 w-72 min-h-52 md:mx-auto border border-black text-black p-5  font-light cursor-default;
 }
 
 .featureIcon {
